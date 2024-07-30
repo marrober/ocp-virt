@@ -3,4 +3,5 @@ kind: Kustomization
 
 resources:
 - namespace.yaml
+- argocd-admin.yaml
 - vm-fedora.yaml
