@@ -1,13 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  creationTimestamp: null
-  name: root-app
+  name: virt-apps
   namespace: openshift-gitops
 spec:
   project: hybrid-app
   destination:
-    namespace: openshift-gitops
+    namespace: hybrid-app
     server: https://kubernetes.default.svc
   ignoreDifferences:
   - group: argoproj.io
@@ -31,7 +30,7 @@ spec:
     - /spec/host
     kind: Route
   source:
-    path: ocp-virt
+    path: vm-config/app-1
     targetRevision: main
     repoURL: https://github.com/marrober/ocp-virt.git
   syncPolicy:
