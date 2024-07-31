@@ -5,3 +5,4 @@ resources:
 - argo-app.yaml
 - hybrid-project.yaml
 - virt-apps-dev.yaml
+- virt-apps-qa.yaml
