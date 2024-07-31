@@ -4,9 +4,9 @@ metadata:
   annotations:
     kubevirt.io/latest-observed-api-version: v1
     kubevirt.io/storage-observed-api-version: v1
-  name: fedora-ivory-alpaca-90
+  name: fedora-ivory-alpaca-96
   labels:
-    app: fedora-ivory-alpaca-90
+    app: fedora-ivory-alpaca-96
     kubevirt.io/dynamic-credentials-support: 'true'
     vm.kubevirt.io/template: fedora-server-small
     vm.kubevirt.io/template.namespace: openshift
@@ -15,7 +15,7 @@ spec:
     - apiVersion: cdi.kubevirt.io/v1beta1
       kind: DataVolume
       metadata:
-        name: fedora-ivory-alpaca-90
+        name: fedora-ivory-alpaca-96
       spec:
         sourceRef:
           kind: DataSource
@@ -33,13 +33,13 @@ spec:
         vm.kubevirt.io/os: fedora
         vm.kubevirt.io/workload: server
       labels:
-        kubevirt.io/domain: fedora-ivory-alpaca-90
+        kubevirt.io/domain: fedora-ivory-alpaca-96
         kubevirt.io/size: small
     spec:
       architecture: amd64
       domain:
         cpu:
-          cores: 2
+          cores: 1
           sockets: 1
           threads: 1
         devices:
@@ -66,7 +66,7 @@ spec:
         machine:
           type: pc-q35-rhel9.2.0
         memory:
-          guest: 4Gi
+          guest: 2Gi
         resources: {}
       networks:
         - name: default
@@ -74,7 +74,7 @@ spec:
       terminationGracePeriodSeconds: 180
       volumes:
         - dataVolume:
-            name: fedora-ivory-alpaca-90
+            name: fedora-ivory-alpaca-96
           name: rootdisk
         - cloudInitNoCloud:
             userData: |-
