@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
 - argo-app.yaml
 - hybrid-project.yaml
-- virt-apps-app-1.yaml
+- virt-apps-dev.yaml

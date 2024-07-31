@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: virt-apps
+  name: virt-apps-dev
   namespace: openshift-gitops
 spec:
   project: hybrid-app
@@ -30,7 +30,7 @@ spec:
     - /spec/host
     kind: Route
   source:
-    path: vm-config/app-1
+    path: vm-config/01-dev
     targetRevision: main
     repoURL: https://github.com/marrober/ocp-virt.git
   syncPolicy:
