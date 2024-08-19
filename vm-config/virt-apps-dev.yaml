@@ -6,7 +6,7 @@ metadata:
 spec:
   project: hybrid-app
   destination:
-    namespace: hybrid-app
+    namespace: hybrid-app-dev
     server: https://kubernetes.default.svc
   ignoreDifferences:
   - group: argoproj.io
